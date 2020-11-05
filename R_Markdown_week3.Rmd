@@ -1,0 +1,48 @@
+---
+title: "data products week 3"
+author: "K S SRIKANTH"
+date: "05/11/2020"
+output: html_document
+---
+
+## Variation of Miles per Gallon with respect to some characteristics of the car.
+
+The rubric contains the following two questions:
+
+1.Does the web page feature a date and is this date less than two months before the date that you're grading this assignment?
+
+2.Is the web page a presentation and does it feature an interactive plot that appears to have been created with Plotly?
+```{r}
+library(plotly)
+data(mtcars)
+head(mtcars)
+```
+```{r}
+plot_ly(mtcars) %>%
+    add_trace(x = ~mpg, y = ~cyl, type="scatter", mode = "markers",name = "circular", legendgroup = "circular", 
+              marker = list(color = "green")) %>%
+    add_trace(x = ~mpg, y = ~gear, type="scatter", mode = "markers",
+              name = "data_point2", legendgroup = "data_point2", 
+              marker = list(color = "orange")) %>%
+    add_trace(x = ~mpg, y = ~carb, type="scatter", mode = "markers",
+              name = "datapoint3", legendgroup = "datapoint3", 
+              marker = list(color = "yellow")) 
+```
+
+I have used scatter plot to represent the data.
+
+i used different colours to distunguish various datas and points.
+
+as per the results the answer for first question is yes as it has data of last two months.
+
+I have created a interactive plot  using scatter plot. it used used so, to disttunguish each data from one another.and to produce results in more simpler manner.
+
+it has taken around four hours of my time and i think the resuls are pretty satisfactory.
+
+The project gave a simple understading of hoe the data can be used and gave experience and also a lot of self confidence
+
+
+
+
+
+
